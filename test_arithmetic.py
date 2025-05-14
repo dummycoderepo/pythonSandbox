@@ -18,6 +18,11 @@ class TestArithmetic(unittest.TestCase):
         self.assertEqual(arithmetic.divide(10, 2), 5)
         with self.assertRaises(ZeroDivisionError):
             arithmetic.divide(1, 0)
-
+            def test_divide_print(self):
+                print("10 / 2 =", arithmetic.divide(10, 2))
+                print("9 / 3 =", arithmetic.divide(9, 3))
+                print("7 / 1 =", arithmetic.divide(7, 1))
+                with self.assertRaises(ZeroDivisionError):
+                    print("1 / 0 =", arithmetic.divide(1, 0))
 if __name__ == "__main__":
     unittest.main()
